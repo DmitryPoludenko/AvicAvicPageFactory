@@ -1,4 +1,15 @@
 package avic;
 
-public class NotebookPage {
+import org.openqa.selenium.WebDriver;
+
+public class NotebookPage extends BasePage {
+
+    public NotebookPage(WebDriver driver) {
+        super(driver);
+    }
+
+
+
+
+
 }
