@@ -11,7 +11,7 @@ public class SearchTests extends BaseTest {
     private String SEARCH_KEYWORD_FOR_IPHONE = "iPhone 11";
     private String SEARCH_KEYWORD_FOR_SCOOTER = "Mi";
 
-    private String EXPECTED_SEARCH_QUERY_FOR_NOTEBOOKS = "proizvoditel--lenovo";
+
 
     private String EXPECTED_SEARCH_QUERY_FOR_IPHONES = "query=iPhone+11";
 
@@ -30,10 +30,14 @@ public class SearchTests extends BaseTest {
 
     @Test(priority = 4)
     public void checkIfSearchResultByFilterContainsSearchWord() {
-        getMainPage().clickOnElectricScooterSwipeButton();
 
-        for (WebElement webElement : getSearchResultsPage().getSearchResultsList()) {
+        getMainPage().clickOnElectricScooterButton();
+        getMainPage().implicitWait(30);
+        getElectricScooterPage().clickOnFilterButton();
+
+        for (WebElement webElement : getElectricScooterPage().getListOfElements()) {
             assertTrue(webElement.getText().contains(SEARCH_KEYWORD_FOR_SCOOTER));
         }
     }
+
 }

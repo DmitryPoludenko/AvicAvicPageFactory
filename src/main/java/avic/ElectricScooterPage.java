@@ -18,11 +18,11 @@ public class ElectricScooterPage extends BasePage {
     @FindBy(xpath = "//div[@class='prod-cart__descr']")
     private List<WebElement> listOfElements;
 
-    public void clickOnFilterButton(){
+    public void clickOnFilterButton() {
         filterButton.click();
     }
 
-    public List<WebElement> getListOfElements(){
+    public List<WebElement> getListOfElements() {
         return listOfElements;
     }
 }

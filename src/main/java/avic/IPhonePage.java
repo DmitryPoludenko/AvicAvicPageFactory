@@ -22,11 +22,11 @@ public class IPhonePage extends BasePage {
     private WebElement filterButton2;
 
 
-    public void clickOnFilterButton1(){
+    public void clickOnFilterButton1() {
         filterButton1.click();
     }
 
-    public void clickOnFilterButton2(){
+    public void clickOnFilterButton2() {
         filterButton2.click();
     }
 

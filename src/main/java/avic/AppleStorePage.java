@@ -10,10 +10,10 @@ public class AppleStorePage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@class='brand-box__info']//a[@href='https://avic.ua/iphone']")
+    @FindBy(xpath = "//div[@class='brand-box__info']//img[@alt='iPhone']")
     private WebElement iPhoneButton;
 
-    public void clickIphoneButton(){
+    public void clickIphoneButton() {
         iPhoneButton.click();
     }
 }

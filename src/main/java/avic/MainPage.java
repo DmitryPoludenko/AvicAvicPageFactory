@@ -1,12 +1,10 @@
 package avic;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import javax.swing.*;
 
 public class MainPage extends BasePage {
 
@@ -22,22 +20,16 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//ul[contains(@class,'sidebar-list')]//a[contains(@href, 'apple-store')]")
     private WebElement appleSoreButton;
 
-    @FindBy(xpath = "//a[@href='https://avic.ua/noutbuki-i-aksessuaryi']//span[@class='sidebar-item-title']")
+    @FindBy(xpath = "//img[@data-src='https://avic.ua/assets/cache/menus/1/3-882649283818-menu_md.png']")
     private WebElement notebookMove1;
 
-    @FindBy(xpath = "//ul[@class='sidebar-list']//a[@href='https://avic.ua/noutbuki']")
+    @FindBy(xpath = "//ul[@class='sidebar-list']//a[contains(text(), 'Ноут')]")
     private WebElement notebookMove2;
 
     @FindBy(xpath = "//ul[@class='sidebar-list']//a[@href='/noutbuki/proizvoditel--lenovo']")
     private WebElement notebookButton;
 
-    @FindBy(xpath = "//a[@href='https://avic.ua/girobordyi-i-giroskuteryi']//span[@class='sidebar-item-title']")
-    private WebElement scooterMove1;
-
-    @FindBy(xpath = "//ul[@class='sidebar-list']//a[contains(text(), 'самокат')]")
-    private WebElement scooterMove2;
-
-    @FindBy(xpath = "//a[@href='/girobordyi-i-giroskuteryi/vid--elektrosamokat']//img")
+    @FindBy(xpath = "//img[@data-src='https://avic.ua/assets/cache/menus/1/12-82649283827-menu_md.png']")
     private WebElement scooterButton;
 
 
@@ -65,16 +57,8 @@ public class MainPage extends BasePage {
                 .moveToElement(notebookButton).click().build().perform();
     }
 
-    public void clickOnElectricScooterSwipeButton() {
-
-
-        Actions action = new Actions(driver);
-
-        action.moveToElement(scooterMove1).pause(500)
-                .moveToElement(scooterMove2).pause(500)
-                .moveToElement(scooterButton).pause(500)
-                .click().build().perform();
+    public void clickOnElectricScooterButton() {
+        scooterButton.click();
     }
-
 
 }

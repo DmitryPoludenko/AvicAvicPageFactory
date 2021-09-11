@@ -25,6 +25,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(AVIC_URL);
+
     }
 
     @AfterMethod
@@ -53,7 +54,8 @@ public class BaseTest {
         return new IPhonePage(getDriver());
     }
 
-    public ElectricScooterPage getElectricScooterPage(){return new ElectricScooterPage(getDriver());}
+    public ElectricScooterPage getElectricScooterPage() {
+        return new ElectricScooterPage(getDriver());
+    }
 
-    public NotebookPage getNotebookPage(){return new NotebookPage(getDriver());}
 }
